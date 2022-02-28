@@ -1,0 +1,57 @@
+@use "../../scss" as *;
+
+.tour {
+  max-width: 600px;
+  box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.2);
+  margin: 2rem auto;
+  transition: all 400ms ease;
+  cursor: pointer;
+
+  &___image {
+    height: auto;
+  }
+  &:hover {
+    transform: scale(1.03);
+  }
+
+  img {
+    width: 100%;
+    height: 25em;
+    object-fit: cover;
+  }
+
+  &__info {
+    padding: 1.5rem;
+    background-color: $white;
+  }
+
+  &__title {
+    @include flex(center, space-between);
+    font-size: 1rem;
+  }
+
+  &__description {
+    text-align: left;
+    margin: 1rem 0 1.2rem;
+  }
+  &__price {
+    color: $blue;
+    background-color: $bg-color;
+  }
+  &__readmore {
+    border: none;
+    background-color: $white;
+    color: $blue;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  &__btn {
+    color: $red;
+    padding: 3px 30px;
+    border: 1px solid $red;
+    background-color: $white;
+    font-size: 1.05rem;
+    font-weight: 500;
+    cursor: pointer;
+  }
+}
