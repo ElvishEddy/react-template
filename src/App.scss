@@ -1,5 +1,37 @@
 @use "./scss" as *;
-.App {
+@use "./components/tours";
+
+body {
+  background-color: $light-blue;
+}
+.wrapper {
   text-align: center;
-  height: 100%;
+  margin-top: 30px;
+}
+.refresh-btn {
+  color: $blue;
+  padding: 3px 30px;
+  border: 1px solid $blue;
+  background-color: $light-blue;
+  font-size: 1.05rem;
+  font-weight: 500;
+  cursor: pointer;
+}
+.app {
+  text-align: center;
+  h1 {
+    margin-top: 1.5rem;
+
+    &::before {
+      content: "";
+      position: absolute;
+      display: block;
+      width: 60px;
+      height: 3px;
+      background-color: $blue;
+      left: 50%;
+      transform: translateX(-50%);
+      top: 50px;
+    }
+  }
 }
